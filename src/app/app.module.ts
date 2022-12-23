@@ -13,6 +13,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CardPlanComponent } from './pages/components/card-plan/card-plan.component';
 import { CardTodoComponent } from './pages/components/card-todo/card-todo.component';
 import { CardDoneComponent } from './pages/components/card-done/card-done.component';
+import { NavbarComponent } from './pages/components/navbar/navbar.component';
+import { PageAryaloComponent } from './pages/page-aryalo/page-aryalo.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { CardDoneComponent } from './pages/components/card-done/card-done.compon
     PageStudentListComponent,
     CardPlanComponent,
     CardTodoComponent,
-    CardDoneComponent
+    CardDoneComponent,
+    NavbarComponent,
+    PageAryaloComponent
   ],
   imports: [
     BrowserModule,
