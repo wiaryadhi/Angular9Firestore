@@ -10,23 +10,29 @@ import { AngularFirestoreModule } from "@angular/fire/compat/firestore";
 import { PageStudentListComponent } from './pages/page-student-list/page-student-list.component';
 import {FormsModule} from "@angular/forms";
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { CardPlanComponent } from './pages/components/card-plan/card-plan.component';
+import { CardTodoComponent } from './pages/components/card-todo/card-todo.component';
+import { CardDoneComponent } from './pages/components/card-done/card-done.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PageStudentListComponent
+    PageStudentListComponent,
+    CardPlanComponent,
+    CardTodoComponent,
+    CardDoneComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     AngularFireModule.initializeApp({
-        apiKey: "AIzaSyBjPP77PsHRn0GKJ0MiqIEEDSAYHyqMrAw",
-        authDomain: "oncom-berry.firebaseapp.com",
-        databaseURL: "https://oncom-berry-default-rtdb.asia-southeast1.firebasedatabase.app",
-        projectId: "oncom-berry",
-        storageBucket: "oncom-berry.appspot.com",
-        messagingSenderId: "291322685143",
-        appId: "1:291322685143:web:ad7ce66eadecd7c0fd7292"
+        apiKey: "AIzaSyCWXT62V8elo9joI6HsmlIYbNT4tGqC2n4",
+        authDomain: "arya-firestore.firebaseapp.com",
+        databaseURL: "https://arya-firestore-default-rtdb.asia-southeast1.firebasedatabase.app",
+        projectId: "arya-firestore",
+        storageBucket: "arya-firestore.appspot.com",
+        messagingSenderId: "825131080855",
+        appId: "1:825131080855:web:7a0c88f337f84dec77ddd2"
       }
     ),
     AngularFirestoreModule,
