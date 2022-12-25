@@ -1,0 +1,39 @@
+<ng-template #content let-c="close" let-d="dismiss">
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Edit Task</h4>
+    <button type="button" class="btn-close" aria-label="Close" (click)="d('Cross click')"></button>
+  </div>
+  <div class="modal-body">
+    <p>Hello, World!</p>
+    <div ngbDropdown class="d-inline-block" *ngFor="let t of tasks">
+      <button type="button" class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>
+        Change Status
+      </button>
+      <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+        <button ngbDropdownItem (click)="t.status = statusPLAN; onUpdate(t.id, t)">PLAN</button>
+        <button ngbDropdownItem (click)="t.status = statusDONE; onUpdate(t.id, t)">DONE</button>
+      </div>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="c('Save click')">Save</button>
+  </div>
+</ng-template>
+
+<div class="card">
+  <div class="card-header"> To-Do
+    <div class="card-body">
+      <div class="card mt-2" *ngFor="let t of tasks">
+        <div class="card-body">
+          <h5 class="card-title">{{ t.title }}</h5>
+          <p class="card-content">{{ t.description }}</p>
+          <button class="btn btn-warning" (click)="open(content)">
+            Edit
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
